@@ -34,6 +34,7 @@ variable "chart_version" {
 }
 
 variable "values" {
+  type = map(any)
   description = "Chart values in yaml format"
   default = null
 }
