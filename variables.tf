@@ -1,3 +1,4 @@
+# @label "Source Type"
 # @options ["url", "repository"]
 variable "source_type" {
   type = string
@@ -5,6 +6,7 @@ variable "source_type" {
   default = "repository"
 }
 
+# @label "Chart URL"
 # @show_if "source_type=url"
 variable "chart_url" {
   type = string
@@ -12,6 +14,7 @@ variable "chart_url" {
   default = ""
 }
 
+# @label "Chart Repository"
 # @show_if "source_type=repository"
 variable "chart_repository" {
   type = string
@@ -19,6 +22,7 @@ variable "chart_repository" {
   default = ""
 }
 
+# @label "Chart Name"
 # @show_if "source_type=repository"
 variable "chart_name" {
   type = string
@@ -26,6 +30,7 @@ variable "chart_name" {
   default = ""
 }
 
+# @label "Chart Version"
 # @show_if "source_type=repository"
 variable "chart_version" {
   type = string
@@ -33,12 +38,14 @@ variable "chart_version" {
   default = ""
 }
 
+# @label "Set Custom Values"
 variable "set_custom_values" {
   type = bool
   description = "Set custom values"
   default = false
 }
 
+# @label "Values"
 # @show_if "set_custom_values=true"
 variable "values" {
   type = map(any)
