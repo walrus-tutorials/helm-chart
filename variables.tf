@@ -15,7 +15,7 @@ variable "chart_url" {
 # @show_if "source_type=repository"
 variable "chart_repository" {
   type = string
-  description = "Chart repository"
+  description = "Chart repository. e.g., https://charts.bitnami.com/bitnami or oci://192.168.1.100:5000/helm-charts"
   default = ""
 }
 
@@ -33,10 +33,17 @@ variable "chart_version" {
   default = ""
 }
 
+variable "set_custom_values" {
+  type = bool
+  description = "Set custom values"
+  default = false
+}
+
+# @show_if "set_custom_values=true"
 variable "values" {
   type = map(any)
-  description = "Chart values in yaml format"
-  default = null
+  description = "Chart values"
+  default = {}
 }
 
 # @hidden
