@@ -2,7 +2,7 @@
 variable "source_type" {
   type = string
   description = "Source type of the chart"
-  default = "url"
+  default = "repository"
 }
 
 # @show_if "source_type=url"
