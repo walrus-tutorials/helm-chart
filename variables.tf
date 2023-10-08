@@ -48,7 +48,7 @@ variable "set_custom_values" {
 # @label "Values"
 # @show_if "set_custom_values=true"
 variable "values" {
-  type = map(any)
+  type = any
   description = "Chart values"
   default = {}
 }
